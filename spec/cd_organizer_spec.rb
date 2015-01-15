@@ -10,6 +10,7 @@ describe (Disc) do
   describe ("#name") do
     it("display the name of the album") do
       test_cd = Disc.new({:name => "Tina's Greatest Hits", :artist => "Tina A"})
+      test_cd.create()
       expect(test_cd.name()).to(eq("Tina's Greatest Hits"))
     end
   end
@@ -17,6 +18,7 @@ describe (Disc) do
   describe ("#artist") do
     it("display the album's artist") do
       test_cd = Disc.new({:name => "Tina's Platnium Hits", :artist => "Tina B"})
+      test_cd.create()
       expect(test_cd.artist()).to(eq("Tina B"))
     end
   end
