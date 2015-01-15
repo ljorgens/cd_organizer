@@ -1,0 +1,9 @@
+<h1>Search Results</h1>
+
+<ul>
+  <% @albums.each() do |results| %>
+  <% if @results == results %>
+    <li><%= results.name() %></li>
+  <% end %>
+  <% end %>
+</ul>

@@ -16,3 +16,16 @@ post('/album') do
   @albums = Disc.list_all()
   erb(:index)
 end
+
+get('/results') do
+  @search = params.fetch("query")
+  @albums = Disc.list_all()
+  @results = Disc.search(@search)
+  erb(:results)
+end
+
+get('/albums/:artist') do
+  artist = params.fetch('artist')
+  @search_artist = Disc.list_album(artist)
+  erb(:albums)
+end

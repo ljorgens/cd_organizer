@@ -11,10 +11,17 @@
   <button type="submit">Add Album</button>
 </form>
 
+<form action="/results">
+  <label for="query">What are you searching for?</label>
+  <input id="query" name="query" type="text">
+
+  <button type="submit">Search</button>
+</form>
+
 
 <h3>Here are the albums in your collection: </h3>
 <ul>
   <% @albums.each() do |album| %>
-  <li><a href="/album/<%= album.id() %>"><%= album.name() %> <%= album.artist() %></a></li>
+  <li>Title: <%= album.name() %> Artist: <a href="/albums/<%= album.artist() %>"><%= album.artist() %></a></li>
   <% end %>
 </ul>
