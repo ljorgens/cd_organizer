@@ -1,0 +1,20 @@
+<h1>CD Collection Organizer</h1>
+
+<h3>Add a new album to your collection:</h3>
+<form action="/album" method="post">
+  <label for="title">Album title:</label>
+  <input id="title" name="title" type="text">
+
+  <label for="artist">Album artist:</label>
+  <input id="artist" name="artist" type="text">
+
+  <button type="submit">Add Album</button>
+</form>
+
+
+<h3>Here are the albums in your collection: </h3>
+<ul>
+  <% @albums.each() do |album| %>
+  <li><a href="/album/<%= vehicle.id() %>"><%= vehicle.model() %></a></li>
+  <% end %>
+</ul>
